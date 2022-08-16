@@ -1,13 +1,7 @@
 from math import sqrt
 import math
-import numpy as np
-
-
-
 from time import sleep
 
-from math import sqrt
-import math
 import numpy as np
 
 def det(a, b):

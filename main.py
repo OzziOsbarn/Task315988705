@@ -835,6 +835,7 @@ class BodyWindow(QWidget):
             return P
     
     def GenTasks(self, data):
+        self.Render.clear()
         for line in data:
             points = self.GetPoints(line)
             self.Render.add_Obj(points)

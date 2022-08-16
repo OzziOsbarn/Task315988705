@@ -814,21 +814,21 @@ class BodyWindow(QWidget):
         type_f = len(data)
         data=[[data[i], data[i+1]] for i in range(0, type_f, 2)]
         if type_f==2:
-            P=Point(pos_x=float(data[0][0]), pos_y=float(data[0][1]))
+            P=Point(pos_x=float(data[0][0]), pos_y=-float(data[0][1]))
             P.Set_color(self.p_color)
             P.Set_size(self.p_size)
             return P
         elif type_f==4:
             L=Line()
             for line in data:
-                L.Add(pos_x=float(line[0]), pos_y=float(line[1]),color=self.p_color,size=self.p_size)
+                L.Add(pos_x=float(line[0]), pos_y=-float(line[1]),color=self.p_color,size=self.p_size)
                 L.Set_color(self.l_color)
                 L.Set_size(self.l_size)
             return L
         elif type_f>=6:
             P=Polygon()
             for line in data:
-                P.Add(pos_x=float(line[0]), pos_y=float(line[1]),color=self.p_color,size=self.p_size)
+                P.Add(pos_x=float(line[0]), pos_y=-float(line[1]),color=self.p_color,size=self.p_size)
                 P.Set_color(self.p_brush)
                 P.Set_line_color(self.l_color)
             P.CloseLine()

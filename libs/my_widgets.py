@@ -20,6 +20,11 @@ class Render:
         self.ind_obj = 0
         self.widget = WidgetDraw
     
+    def clear(self):
+        self.listOfObj={}
+        for item in self.widget.scene.items():
+            self.widget.scene.removeItem(item)
+    
     def Axes_show(self):
         if self.axes_show == True:
             self.axes_show = False
